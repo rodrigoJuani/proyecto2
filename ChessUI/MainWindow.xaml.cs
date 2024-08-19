@@ -18,7 +18,7 @@ namespace ChessUI
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();//este es un comentario
         }
     }
 }

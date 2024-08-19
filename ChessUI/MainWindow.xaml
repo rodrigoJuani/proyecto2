@@ -12,4 +12,5 @@
             <ImageBrush ImageSource="Assets/Board.png"/>
         </Grid.Background>
     </Grid>
+    
 </Window>
