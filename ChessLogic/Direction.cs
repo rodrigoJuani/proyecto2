@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ChessLogic
+﻿namespace ChessLogic
 {
     public class Direction
     {
@@ -21,7 +15,7 @@ namespace ChessLogic
         }
         public static Direction operator*(int scalar,Direction dir)
         {
-            return new Direction(scalar + dir.RowDelta, scalar + dir.ColumnDelta);
+            return new Direction(scalar * dir.RowDelta, scalar * dir.ColumnDelta);
         }
     }
 }
