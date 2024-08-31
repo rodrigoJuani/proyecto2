@@ -50,7 +50,14 @@ namespace ChessLogic
                 this[6, c] = new Pawn(Player.White);
 
             }
-
+        }
+        public static bool IsInside(Position pos)
+        {
+            return pos.Row >= 0 && pos.Row < 8 && pos.Column >= 0 && pos.Column < 8;
+        }
+        public bool IsEmpty(Position pos)
+        {
+            return this[pos] == null;
         }
     }
 }
