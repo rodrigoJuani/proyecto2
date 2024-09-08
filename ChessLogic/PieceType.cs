@@ -4,9 +4,9 @@
     {
         Pawn,
         Bishop,
-        knight,
+        Knight,
         Rook,
         Queen,
-        king
+        King
     }
 }

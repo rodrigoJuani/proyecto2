@@ -1,5 +1,4 @@
-using System.Collections.Generic;
-using System.Windows.Media;
+﻿using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using ChessLogic;
 namespace ChessUI
@@ -8,21 +7,22 @@ namespace ChessUI
     {
         private static readonly Dictionary<PieceType, ImageSource> whiteSources = new()
         {
-            {PieceType.Pawn, LoadImage("Assets/PawnW.png") },
-            {PieceType.Bishop, LoadImage("Assets/BishoW.png") },
-            {PieceType.knight, LoadImage("Assets/knightW.png") },
-            {PieceType.Rook, LoadImage("Assets/RookW.png") },
-            {PieceType.Queen, LoadImage("Assets/QueenW.png") },
-            {PieceType.king, LoadImage("Assets/KingW.png") }
+            {PieceType.Pawn,LoadImage("Assets/PawnW.png")},
+            {PieceType.Bishop,LoadImage("Assets/BishopW.png")},
+            {PieceType.Knight,LoadImage("Assets/KnightW.png")},
+            {PieceType.Rook,LoadImage("Assets/RookW.png")},
+            {PieceType.Queen,LoadImage("Assets/QueenW.png")},
+            {PieceType.King,LoadImage("Assets/KingW.png")}
         };
         private static readonly Dictionary<PieceType, ImageSource> blackSources = new()
         {
-            {PieceType.Pawn, LoadImage("Assets/PawnB.png") },
-            {PieceType.Bishop, LoadImage("Assets/BishoB.png") },
-            {PieceType.knight, LoadImage("Assets/knightB.png") },
-            {PieceType.Rook, LoadImage("Assets/RookB.png") },
-            {PieceType.Queen, LoadImage("Assets/QueenB.png") },
-            {PieceType.king, LoadImage("Assets/KingB.png") }
+            {PieceType.Pawn,LoadImage("Assets/PawnB.png")},
+            {PieceType.Bishop,LoadImage("Assets/BishopB.png")},
+            {PieceType.Knight,LoadImage("Assets/KnightB.png")},
+            {PieceType.Rook,LoadImage("Assets/RookB.png")},
+            {PieceType.Queen,LoadImage("Assets/QueenB.png")},
+            {PieceType.King,LoadImage("Assets/KingB.png")}
+
         };
         private static ImageSource LoadImage(string filePath)
         {
@@ -34,7 +34,7 @@ namespace ChessUI
             {
                 Player.White => whiteSources[type],
                 Player.Black => blackSources[type],
-                _ =>null
+                _ => null
             };
         }
         public static ImageSource GetImage(Piece piece)
@@ -45,5 +45,6 @@ namespace ChessUI
             }
             return GetImage(piece.Color, piece.Type);
         }
+
     }
 }

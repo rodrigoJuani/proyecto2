@@ -23,6 +23,7 @@ namespace ChessLogic
         public static Board Initial()
         {
             Board board = new Board();
+            board.AddStartPieces();
             return board;
         }
         private void AddStartPieces()
