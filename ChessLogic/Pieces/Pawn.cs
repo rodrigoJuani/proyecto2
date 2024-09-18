@@ -39,5 +39,19 @@ namespace ChessLogic
             }
             return board[pos].Color != Color;
         }
+        private IEnumerable<Move> ForwardMoves(Position from,Board board)
+        {
+            Position oneMovesPos = from + forward;
+            if (CanMoveTo(oneMovesPos, board))
+            {
+                yield return new NormalMove(from, oneMovesPos);
+                Position twoMovesPos = oneMovesPos + forward;
+                if(!HasMoved && CanMoveTo(twoMovesPos, board))
+                {
+                    yield return new NormalMove(from, twoMovesPos);
+                }
+            }
+        }
+
     }
 }
