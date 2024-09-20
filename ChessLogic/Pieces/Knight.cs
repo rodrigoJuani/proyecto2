@@ -20,5 +20,16 @@ namespace ChessLogic
             copy.HasMoved = HasMoved;
             return copy;
         }
+        private static IEnumerable<Position> PotentialToPositions(Position from)
+        {
+            foreach(Direction vDir in new Direction[] { Direction.North, Direction.South })
+            {
+                foreach(Direction hDir in new Direction[] { Direction.West, Direction.East })
+                {
+                    yield return from + 2 * vDir + hDir;
+                    yield return from + 2 * hDir + vDir;
+                }
+            }
+        }
     }
 }
