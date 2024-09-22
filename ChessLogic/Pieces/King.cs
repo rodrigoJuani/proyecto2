@@ -10,6 +10,17 @@ namespace ChessLogic
     {
         public override PieceType Type => PieceType.King;
         public override Player Color { get; }
+        private static readonly Direction[] dirs = new Direction[]
+        {
+            Direction.North,
+            Direction.South,
+            Direction.East,
+            Direction.West,
+            Direction.NorthWest,
+            Direction.NorthEast,
+            Direction.SouthWest,
+            Direction.SouthEast
+        };
         public King(Player color)
         {
             Color = color;
@@ -19,6 +30,10 @@ namespace ChessLogic
             King copy = new King(Color);
             copy.HasMoved = HasMoved;
             return copy;
+        }
+        private IEnumerable<Position> MovePositions(Position from,Board board)
+        {
+
         }
     }
 }
