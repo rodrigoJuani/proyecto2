@@ -1,6 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using ChessLogic;
 
 namespace ChessUI
@@ -32,6 +33,10 @@ namespace ChessUI
                     Image image = new Image();
                     pieceImages[r, c] = image;
                     PieceGrid.Children.Add(image);
+
+                    Rectangle highlight = new Rectangle();
+                    highlights[r, c] = highlight;
+                    HighlightGrid.Children.Add(highlight);
                 }
             }
         }
@@ -44,6 +49,18 @@ namespace ChessUI
                     Piece piece = board[r, c];
                     pieceImages[r, c].Source = Images.GetImage(piece);
                 }
+            }
+        }
+        private void BoardGrid_Mouse(object sender,MouseButtonEventArgs e)
+        {
+
+        }
+        private void CacheMoves(IEnumerable<Move> moves)
+        {
+            moveCache.Clear();
+            foreach(Move move in moves)
+            {
+                moveCache[move.ToPos] = move;
             }
         }
      }
