@@ -2,6 +2,8 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
+//using System.Windows.Shapes;
 using ChessLogic;
 
 namespace ChessUI
@@ -53,14 +55,38 @@ namespace ChessUI
         }
         private void BoardGrid_Mouse(object sender,MouseButtonEventArgs e)
         {
-
+            Point point = e.GetPosition(BoardGrid);
+            Position pos = ToSquarePosition(point);
         }
+        private Position ToSquarePosition(Point point)
+        {
+            double squareSize = BoardGrid.ActualWidth / 8;
+            int row = (int)(point.Y / squareSize);
+            int col = (int)(point.X / squareSize);
+            return new Position(row, col);
+        }
+
         private void CacheMoves(IEnumerable<Move> moves)
         {
             moveCache.Clear();
             foreach(Move move in moves)
             {
                 moveCache[move.ToPos] = move;
+            }
+        }
+        private void ShowHighlights()
+        {
+            Color color = Color.FromArgb(150, 125, 255, 125);
+            foreach(Position to in moveCache.Keys)
+            {
+                highlights[to.Row, to.Column].Fill = new SolidColorBrush(color);
+            }
+        }
+        private void HideHighlights()
+        {
+            foreach(Position to in moveCache.Keys)
+            {
+                highlights[to.Row, to.Column].X = Brushes.Transparent;
             }
         }
      }
