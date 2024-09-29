@@ -57,6 +57,14 @@ namespace ChessUI
         {
             Point point = e.GetPosition(BoardGrid);
             Position pos = ToSquarePosition(point);
+            if (selectedPos == null)
+            {
+                OnFromPositionSelected(pos);
+            }
+            else
+            {
+                OnToPositionSelector(pos);
+            }
         }
         private Position ToSquarePosition(Point point)
         {
@@ -65,7 +73,16 @@ namespace ChessUI
             int col = (int)(point.X / squareSize);
             return new Position(row, col);
         }
-
+        private void OnFromPositionSelected(Position pos)
+        {
+            IEnumerable<move> moves = gameState.LegalMovesForPiece(pos);
+            if (moves.Any())
+            {
+                selectedPos = pos;
+                CacheMoves(moves);
+                ShowHighlights();
+            }
+        }
         private void CacheMoves(IEnumerable<Move> moves)
         {
             moveCache.Clear();
