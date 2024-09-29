@@ -83,6 +83,23 @@ namespace ChessUI
                 ShowHighlights();
             }
         }
+        private void OnToPositionSelected(Position pos)
+        {
+            selectedPos = null;
+            HideHighlights();
+            if(moveCache.TryGetValue(pos,out Move move))
+            {
+                HandleMove(move);
+            }
+        }
+        private void CacheMoves(IEnumerable<Move> moves)
+        {
+            moveCache.Clear();
+            foreach (Move move in moves)
+            {
+                moveCache[move.ToPos]=move;
+            }
+        }
         private void CacheMoves(IEnumerable<Move> moves)
         {
             moveCache.Clear();
