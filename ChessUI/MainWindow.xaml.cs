@@ -75,7 +75,7 @@ namespace ChessUI
         }
         private void OnFromPositionSelected(Position pos)
         {
-            IEnumerable<move> moves = gameState.LegalMovesForPiece(pos);
+            IEnumerable<Move> moves = gameState.LegalMovesForPiece(pos);
             if (moves.Any())
             {
                 selectedPos = pos;
@@ -91,6 +91,11 @@ namespace ChessUI
             {
                 HandleMove(move);
             }
+        }
+        private void HandleMove(Move move)
+        {
+            gameState.MakeMove(move);
+            DrawBoard(gameState.Board);
         }
         private void CacheMoves(IEnumerable<Move> moves)
         {
