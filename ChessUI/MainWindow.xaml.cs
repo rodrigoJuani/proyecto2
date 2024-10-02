@@ -3,6 +3,9 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Shapes;
+using System.Xml.Serialization;
+
 //using System.Windows.Shapes;
 using ChessLogic;
 
@@ -25,6 +28,7 @@ namespace ChessUI
 
             gameState = new GameState(Player.White, Board.Initial());
             DrawBoard(gameState.Board);
+            SetCursor(gameState.CurrentPlayer);
         }
         private void InitializeBoard()
         {
@@ -63,7 +67,7 @@ namespace ChessUI
             }
             else
             {
-                OnToPositionSelector(pos);
+                OnToPositionSelected(pos);
             }
         }
         private Position ToSquarePosition(Point point)
@@ -96,6 +100,7 @@ namespace ChessUI
         {
             gameState.MakeMove(move);
             DrawBoard(gameState.Board);
+            SetCursor(gameState.CurrentPlayer);
         }
         private void CacheMoves(IEnumerable<Move> moves)
         {
@@ -103,14 +108,6 @@ namespace ChessUI
             foreach (Move move in moves)
             {
                 moveCache[move.ToPos]=move;
-            }
-        }
-        private void CacheMoves(IEnumerable<Move> moves)
-        {
-            moveCache.Clear();
-            foreach(Move move in moves)
-            {
-                moveCache[move.ToPos] = move;
             }
         }
         private void ShowHighlights()
@@ -125,9 +122,20 @@ namespace ChessUI
         {
             foreach(Position to in moveCache.Keys)
             {
-                highlights[to.Row, to.Column].X = Brushes.Transparent;
+                highlights[to.Row, to.Column].Fill = Brushes.Transparent;
             }
         }
-     }
+        private void SetCursor(Player player)
+        {
+            if (player == Player.White)
+            {
+                Cursor = ChessCursors.WhiteCursor;
+            }
+            else
+            {
+                Cursor = ChessCursors.BlackCursor;
+            }
+        }
+    }
     
 }

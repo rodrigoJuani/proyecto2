@@ -15,8 +15,8 @@ namespace ChessUI
         public static readonly Cursor BlackCursor = LoadCursor("Assets/CursorB.cur");
         private static Cursor LoadCursor(String filePath)
         {
-            Stream stream = Application.GetResourceStream(new Uri(filePath, Urikind.Relative)).Stream;
+            Stream stream = Application.GetResourceStream(new Uri(filePath,UriKind.Relative)).Stream;
             return new Cursor(stream, true);
-       
+        }
     }
 }
