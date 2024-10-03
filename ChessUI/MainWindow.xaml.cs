@@ -1,5 +1,4 @@
-﻿using System.Drawing;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -57,7 +56,7 @@ namespace ChessUI
                 }
             }
         }
-        private void BoardGrid_Mouse(object sender,MouseButtonEventArgs e)
+        private void BoardGrid_MouseDown(object sender,MouseButtonEventArgs e)
         {
             Point point = e.GetPosition(BoardGrid);
             Position pos = ToSquarePosition(point);
