@@ -56,7 +56,7 @@ namespace ChessLogic
         }
         public bool IsGameOver()
         {
-           
+            return Result != null;
         }
     }
 }
