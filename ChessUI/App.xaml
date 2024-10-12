@@ -8,6 +8,17 @@
         <SolidColorBrush x:Key="FillColor">#cc380404</SolidColorBrush>
         <SolidColorBrush x:Key="TextColor">#ffa274</SolidColorBrush>
         <SolidColorBrush x:Key="ButtonColor">#730909</SolidColorBrush>
-        
+        <Style TargetType="Border" x:Key="BorderStryle">
+            <Setter Property="BorderThickness" Value="4"/>
+            <Setter Property="BorderBrush" Value="{StaticResource StrokeColor}"/>
+            <Setter Property="CornerRadius" Value="10"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="TextStyle">
+            <Setter Property="FontFamily" Value="Segoe UI Light"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="{StaticResource TextColor}"/>
+           
+        </Style>
     </Application.Resources>
 </Application>
