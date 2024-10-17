@@ -1,18 +1,6 @@
 ﻿using ChessLogic;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace ChessUI
 {
@@ -22,9 +10,13 @@ namespace ChessUI
     public partial class GameOverMenu : UserControl
     {
         public event Action<Option> OptionSelected;
-        public GameOverMenu()
+        public GameOverMenu(GameState gameState)
         {
             InitializeComponent();
+
+            Result result = gameState.Result;
+            WinnerText.Text = GetWinnerText(result.Winder);
+            ReasonText.Text = GetReasonText(result.Reason, gameState.CurrentPlayer);
         }
         private static string GetWinnerText(Player winner)
         {
