@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ChessLogic
+﻿namespace ChessLogic
 {
     public class PawnPromotion:Move
     {
@@ -36,7 +30,8 @@ namespace ChessLogic
 
             Piece promotionPiece = CreatePromotionPiece(pawn.Color);
             promotionPiece.HasMoved = true;
-            ///
+            board[ToPos] = promotionPiece;
         }
+
     }
 }
