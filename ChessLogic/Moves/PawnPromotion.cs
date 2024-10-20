@@ -2,7 +2,7 @@
 {
     public class PawnPromotion:Move
     {
-        public override MoveType Type => MoveTopy.PawnPromotion;
+        public override MoveType Type => MoveType.PawnPromotion;
         public override Position FromPos { get; }
         public override Position ToPos { get; }
         private readonly PieceType newType;
