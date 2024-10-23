@@ -108,6 +108,16 @@ namespace ChessLogic
             }
             return copy;
         }
+        public Counting CountingPieces()
+        {
+            Counting counting = new Counting();
+
+            foreach (Position pos in PiecePositions())
+            {
+                Piece piece = this[pos];
+                counting.Increment(piece.Color, piece.Type);
+            }/////////
+        }
 
     }
 }
