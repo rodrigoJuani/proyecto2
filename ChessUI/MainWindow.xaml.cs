@@ -195,5 +195,19 @@ namespace ChessUI
             DrawBoard(gameState.Board);
             SetCursor(gameState.CurrentPlayer);
         }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(!IsMenuOnScreen() && e.Key==Key.Escape)
+            {
+                ShowPauseMenu();
+            }
+        }
+
+        private void ShowPauseMenu()
+        {
+            PauseMenu pauseMenu = new PauseMenu();
+            MenuContainer.Content = pauseMenu;
+        }
     }
 }
