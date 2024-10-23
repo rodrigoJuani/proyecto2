@@ -189,6 +189,7 @@ namespace ChessUI
         }
         private void RestartGame()
         {
+            selectedPos = null;
             HideHighlights();
             moveCache.Clear();
             gameState = new GameState(Player.White,Board.Initial());
@@ -208,6 +209,15 @@ namespace ChessUI
         {
             PauseMenu pauseMenu = new PauseMenu();
             MenuContainer.Content = pauseMenu;
+
+            pauseMenu.OptionSelected += option =>
+            {
+                MenuContainer.Content = null;
+                if (option == Option.Restart)
+                {
+                    RestartGame();
+                }
+            };
         }
     }
 }
