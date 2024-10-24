@@ -33,5 +33,6 @@
         {
             return blackCount[type];
         }
+
     }
 }

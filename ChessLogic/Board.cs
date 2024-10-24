@@ -108,7 +108,7 @@ namespace ChessLogic
             }
             return copy;
         }
-        public Counting CountingPieces()
+        public Counting CountPieces()
         {
             Counting counting = new Counting();
 
@@ -117,7 +117,23 @@ namespace ChessLogic
                 Piece piece = this[pos];
                 counting.Increment(piece.Color, piece.Type);
             }/////////
+            return counting;
         }
+        public bool InsufficientMaterial()
+        {
+            Counting counting = CountPieces();
+
+            return false;
+        }
+        private static bool IsKingVKing(Counting counting)
+        {
+            return counting.TotalCount == 2;
+        }
+        private static bool isKingBishopVKing(Counting counting)
+        {
+            return counting.TotalCount == 3 && (counting.White(PieceType.Bishop) == 1 || counting.Black(PieceType.Bishop) == 1);
+        }
+
 
     }
 }
