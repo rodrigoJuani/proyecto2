@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ChessLogic
+﻿namespace ChessLogic
 {
     public class Board
     {
@@ -123,7 +117,7 @@ namespace ChessLogic
         {
             Counting counting = CountPieces();
 
-            return false;
+        
         }
         private static bool IsKingVKing(Counting counting)
         {
@@ -137,9 +131,25 @@ namespace ChessLogic
         {
             return counting.TotalCount == 3 && (counting.White(PieceType.Knight) == 1 || counting.Black(PieceType.Knight) == 1);
         }
-        private static bool IsKingBishopVKingBishop(Counting counting)
+        private  bool IsKingBishopVKingBishop(Counting counting)
         {
+            if (counting.TotalCount != 4)
+            {
+                return false;
+            }
+            if(counting.White(PieceType.Bishop)!=1 || counting.Black(PieceType.Bishop) != 1)
+            {
+                return false;
+            }
+            Position wBishopPos = FindPiece(Player.White, PieceType.Bishop);
+            Position bBishopPos = FindPiece(Player.Black, PieceType.Bishop);
 
+            return wBishopPos.SquareColor() == bBishopPos.SquareColor();
+
+        }
+        private Position FindPiece(Player color,PieceType type)
+        {
+            return PiecePositionsFor(color).First(pos => this[pos].Type == type);
         }
 
     }
