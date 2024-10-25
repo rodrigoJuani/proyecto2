@@ -30,7 +30,16 @@ namespace ChessLogic
         public void MakeMove(Move move)
         {
             Board.SetPawnSkipPosition(CurrentPlayer, null);
-            move.Execute(Board);
+            bool captureOrPaw=move.Execute(Board);
+
+            if (captureOrPaw)
+            {
+                noCaptureOrPawnMoves = 0;
+            }
+            else
+            {
+                noCaptureOrPawnMoves++;
+            }
             CurrentPlayer = CurrentPlayer.Opponent();
             CheckForGameOver();
         }
