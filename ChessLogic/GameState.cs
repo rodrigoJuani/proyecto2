@@ -74,5 +74,9 @@ namespace ChessLogic
         {
             return Result != null;
         }
+        private bool FiftyMoveRule()
+        {
+            int fullMoves = noCaptureOrPawnMoves / 2;
+        }
     }
 }
