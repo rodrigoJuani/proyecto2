@@ -68,6 +68,9 @@ namespace ChessLogic
             else if (Board.InsufficientMaterial())
             {
                 Result = Result.Draw(EndReason.InsufficientMaterial);//
+            }else if (FiftyMoveRule())
+            {
+                Result = Result.Draw(EndReason.FiftyMoveRule);
             }
         }
         public bool IsGameOver()
@@ -77,6 +80,7 @@ namespace ChessLogic
         private bool FiftyMoveRule()
         {
             int fullMoves = noCaptureOrPawnMoves / 2;
+            return fullMoves==50
         }
     }
 }
