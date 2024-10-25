@@ -23,6 +23,9 @@ namespace ChessLogic
             board[ToPos] = piece;
             board[FromPos] = null;
             piece.HasMoved = true;
+
+            return capture || piece.Type == PieceType.Pawn;
+
         }
     }
 }
