@@ -117,7 +117,8 @@
         {
             Counting counting = CountPieces();
 
-        
+            return IsKingVKing(counting) || isKingBishopVKing(counting) ||
+                   IsKingKnightVKing(counting) || IsKingBishopVKingBishop(counting);
         }
         private static bool IsKingVKing(Counting counting)
         {
