@@ -188,6 +188,10 @@
             {
                 return false;
             }
+            Position[] pawnPositions=player switch
+            {
+                Player.White=>new Position[] {skipPos+Direction.SouthEast,}
+            }
         }
     }
 }
