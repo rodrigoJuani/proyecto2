@@ -165,11 +165,16 @@
         }
         public bool CastleRightKS(Player player)
         {
-            return player switch 
+            return player switch
             {
-                Player.White=>IsUnmovedKingAndRook(new Position(7,4),new Position(7,7)),
-            }
+                Player.White => IsUnmovedKingAndRook(new Position(7, 4), new Position(7, 7)),
+                Player.Black => IsUnmovedKingAndRook(new Position(0, 4), new Position(0, 7)),
+                _ => false
+            };
         }
+        public bool CastleRightQS(Player player)
+        {
 
+        }
     }
 }
