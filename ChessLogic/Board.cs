@@ -183,7 +183,11 @@
         }
         public bool CanCaptureEnPassant(Player player)
         {
-
+            Position skipPos = GetPawnSkipPosition(player.Opponent());
+            if (skipPos == null)
+            {
+                return false;
+            }
         }
     }
 }
