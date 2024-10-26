@@ -154,7 +154,13 @@
         }
         private bool IsUnmovedKingAndRook(Position kingPos,Position rookPos)
         {
-            if
+            if(IsEmpty(kingPos) || IsEmpty(rookPos))
+            {
+                return false;
+            }
+            Piece king = this[kingPos];
+            Piece rook = this[rookPos];
+            return king.Type==PieceType.King &&
         }
 
     }
