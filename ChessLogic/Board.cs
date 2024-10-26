@@ -165,7 +165,10 @@
         }
         public bool CastleRightKS(Player player)
         {
-
+            return player switch 
+            {
+                Player.White=>IsUnmovedKingAndRook(new Position(7,4),new Position(7,7)),
+            }
         }
 
     }
