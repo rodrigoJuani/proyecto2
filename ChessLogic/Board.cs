@@ -190,7 +190,9 @@
             }
             Position[] pawnPositions=player switch
             {
-                Player.White=>new Position[] {skipPos+Direction.SouthEast,}
+                Player.White=>new Position[] {skipPos+Direction.SouthEast,skipPos+Direction.SouthWest},
+                Player.Black=>new Position[] {skipPos+Direction.NorthWest,skipPos+Direction.NorthEast},
+                _=>Array.Empty<Position>()
             }
         }
     }
