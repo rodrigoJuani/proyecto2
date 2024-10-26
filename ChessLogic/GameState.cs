@@ -80,7 +80,7 @@ namespace ChessLogic
         private bool FiftyMoveRule()
         {
             int fullMoves = noCaptureOrPawnMoves / 2;
-            return fullMoves==50
+            return fullMoves == 50;
         }
     }
 }

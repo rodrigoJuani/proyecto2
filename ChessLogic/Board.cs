@@ -152,6 +152,10 @@
         {
             return PiecePositionsFor(color).First(pos => this[pos].Type == type);
         }
+        private bool IsUnmovedKingAndRook(Position kingPos,Position rookPos)
+        {
+            if
+        }
 
     }
 }
