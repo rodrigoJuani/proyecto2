@@ -160,7 +160,12 @@
             }
             Piece king = this[kingPos];
             Piece rook = this[rookPos];
-            return king.Type==PieceType.King &&
+            return king.Type == PieceType.King && rook.Type == PieceType.Rook &&
+                !king.HasMoved && !rook.HasMoved;
+        }
+        public bool CastleRightKS(Player player)
+        {
+
         }
 
     }
