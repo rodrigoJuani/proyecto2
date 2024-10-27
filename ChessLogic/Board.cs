@@ -191,7 +191,11 @@
                     continue;
                 }
                 EnPassant move = new EnPassant(pos, skipPos);
-            }
+                if (move.IsLegal(this))
+                {
+                    return true;
+                }
+{            }
         }
         public bool CanCaptureEnPassant(Player player)
         {
