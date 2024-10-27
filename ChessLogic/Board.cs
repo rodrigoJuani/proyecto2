@@ -190,6 +190,7 @@
                 {
                     continue;
                 }
+                EnPassant move = new EnPassant(pos, skipPos);
             }
         }
         public bool CanCaptureEnPassant(Player player)
