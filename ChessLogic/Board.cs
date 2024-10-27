@@ -205,12 +205,13 @@
             {
                 return false;
             }
-            Position[] pawnPositions=player switch
-            {
-                Player.White=>new Position[] {skipPos+Direction.SouthEast,skipPos+Direction.SouthWest},
-                Player.Black=>new Position[] {skipPos+Direction.NorthWest,skipPos+Direction.NorthEast},
-                _=>Array.Empty<Position>()
-            }
+                Position[] pawnPositions = player switch
+                {
+                    Player.White => new Position[] { skipPos + Direction.SouthEast, skipPos + Direction.SouthWest },
+                    Player.Black => new Position[] { skipPos + Direction.NorthWest, skipPos + Direction.NorthEast },
+                    _ => Array.Empty<Position>()
+                };
+                return HasPawnInPosition(player, pawnPositions, skipPos);
         }
     }
 }
