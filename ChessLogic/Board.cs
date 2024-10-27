@@ -186,7 +186,10 @@
             foreach (Position pos in pawnPositions.Where(IsInside))
             {
                 Piece piece = this[pos];
-                if(piece==null || piece.Color!=player)
+                if(piece==null || piece.Color!=player || piece.Type != PieceType.Pawn)
+                {
+                    continue;
+                }
             }
         }
         public bool CanCaptureEnPassant(Player player)
