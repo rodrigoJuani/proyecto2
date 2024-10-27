@@ -181,6 +181,10 @@
                 _ => false
             };
         }
+        private bool HasPawnInPosition(Player player, Position[] pawnPositions,Position skipPos)
+        {
+            foreach
+        }
         public bool CanCaptureEnPassant(Player player)
         {
             Position skipPos = GetPawnSkipPosition(player.Opponent());
