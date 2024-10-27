@@ -183,7 +183,10 @@
         }
         private bool HasPawnInPosition(Player player, Position[] pawnPositions,Position skipPos)
         {
-            foreach
+            foreach (Position pos in pawnPositions.Where(IsInside))
+            {
+                Piece piece = this[pos];
+            }
         }
         public bool CanCaptureEnPassant(Player player)
         {
