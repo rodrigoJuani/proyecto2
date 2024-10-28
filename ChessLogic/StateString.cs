@@ -19,5 +19,9 @@ namespace ChessLogic
             sb.Append(' ');
             //Add en passant data
         }
+        private static char PieceChar(Piece piece)
+        {
+
+        }
     }
 }
