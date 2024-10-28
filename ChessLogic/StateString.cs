@@ -21,7 +21,10 @@ namespace ChessLogic
         }
         private static char PieceChar(Piece piece)
         {
+            char c=piece.Type switch
+            {
 
+            }
         }
     }
 }
