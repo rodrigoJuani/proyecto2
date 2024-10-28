@@ -25,6 +25,8 @@ namespace ChessLogic
             {
                 PieceType.Pawn => 'p',
                 PieceType.Knight=>'n',
+                PieceType.Rook=>'r',
+                PieceType.Bishop=>'b',
             };
         }
     }
