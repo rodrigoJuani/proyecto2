@@ -21,10 +21,11 @@ namespace ChessLogic
         }
         private static char PieceChar(Piece piece)
         {
-            char c=piece.Type switch
+            char c = piece.Type switch
             {
-
-            }
+                PieceType.Pawn => 'p',
+                PieceType.Knight=>'n',
+            };
         }
     }
 }
