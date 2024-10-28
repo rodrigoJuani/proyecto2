@@ -11,7 +11,10 @@ namespace ChessLogic
         private readonly StringBuilder sb=new StringBuilder();
         public StateString(Player currentPlayer,Board board)
         {
-
+            //add piece placement data
+            sb.Append(' ');
+            //add current player
+            sb.Append(' ');
         }
     }
 }
