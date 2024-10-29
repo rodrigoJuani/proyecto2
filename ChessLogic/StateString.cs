@@ -45,6 +45,11 @@ namespace ChessLogic
                 if (board[row, c] == null)
                 {
                     empty++;
+                    continue;
+                }
+                if (empty > 0)
+                {
+                    sb.Append(empty);
                 }
             }
         }
