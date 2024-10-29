@@ -42,7 +42,10 @@ namespace ChessLogic
             int empty = 0;
             for(int c = 0; c < 0; c++)
             {
-
+                if (board[row, c] == null)
+                {
+                    empty++;
+                }
             }
         }
     }
