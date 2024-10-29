@@ -35,6 +35,11 @@ namespace ChessLogic
             {
                 return char.ToUpper(c);
             }
+            return c;
+        }
+        private void AddRowData(Board board,int row)
+        {
+
         }
     }
 }
