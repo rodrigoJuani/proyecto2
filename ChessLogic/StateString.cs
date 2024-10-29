@@ -50,7 +50,9 @@ namespace ChessLogic
                 if (empty > 0)
                 {
                     sb.Append(empty);
+                    empty = 0;
                 }
+                sb.Append(PieceChar(board[row, c]));
             }
         }
     }
