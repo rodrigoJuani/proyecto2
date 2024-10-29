@@ -31,6 +31,10 @@ namespace ChessLogic
                 PieceType.Queen=>'q'
                 _=>' '
             };
+            if (piece.Color == Player.White)
+            {
+
+            }
         }
     }
 }
