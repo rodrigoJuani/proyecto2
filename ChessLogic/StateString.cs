@@ -33,7 +33,7 @@ namespace ChessLogic
             };
             if (piece.Color == Player.White)
             {
-
+                return char.ToUpper(c);
             }
         }
     }
