@@ -39,7 +39,11 @@ namespace ChessLogic
         }
         private void AddRowData(Board board,int row)
         {
+            int empty = 0;
+            for(int c = 0; c < 0; c++)
+            {
 
+            }
         }
     }
 }
