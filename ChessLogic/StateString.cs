@@ -27,6 +27,7 @@ namespace ChessLogic
                 PieceType.Knight=>'n',
                 PieceType.Rook=>'r',
                 PieceType.Bishop=>'b',
+                PieceType.King=>'q',
             };
         }
     }
