@@ -61,7 +61,10 @@ namespace ChessLogic
         }
         private void AddPiecePlacement(Board board)
         {
-
+            for(int r = 0; r < 8; r++)
+            {
+                AddRowData(board, r);
+            }
         }
     }
 }
