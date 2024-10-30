@@ -13,7 +13,7 @@ namespace ChessLogic
         {
             AddPiecePlacement(board);
             sb.Append(' ');
-            //add current player
+            AddCurrentPlayer(currentPlayer);
             sb.Append(' ');
             //add castling rights
             sb.Append(' ');
@@ -80,6 +80,10 @@ namespace ChessLogic
             {
                 sb.Append('b');
             }
+        }
+        private void AddCastlingRights(Board board)
+        {
+
         }
     }
 }
