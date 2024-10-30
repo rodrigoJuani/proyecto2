@@ -83,7 +83,7 @@ namespace ChessLogic
         }
         private void AddCastlingRights(Board board)
         {
-
+            bool castleWKS = board.CastleRightKS(Player.White);
         }
     }
 }
