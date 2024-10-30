@@ -76,6 +76,10 @@ namespace ChessLogic
             {
                 sb.Append('w');
             }
+            else
+            {
+                sb.Append('b');
+            }
         }
     }
 }
