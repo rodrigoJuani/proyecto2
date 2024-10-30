@@ -28,7 +28,7 @@ namespace ChessLogic
                 PieceType.Rook=>'r',
                 PieceType.Bishop=>'b',
                 PieceType.King=>'k',
-                PieceType.Queen=>'q'
+                PieceType.Queen=>'q',
                 _=>' '
             };
             if (piece.Color == Player.White)
@@ -53,6 +53,10 @@ namespace ChessLogic
                     empty = 0;
                 }
                 sb.Append(PieceChar(board[row, c]));
+            }
+            if (empty > 0)
+            {
+                sb.Append(empty);
             }
         }
     }
