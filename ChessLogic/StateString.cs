@@ -72,7 +72,10 @@ namespace ChessLogic
         }
         private void AddCurrentPlayer(Player currentPlayer)
         {
-
+            if (currentPlayer == Player.White)
+            {
+                sb.Append('w');
+            }
         }
     }
 }
