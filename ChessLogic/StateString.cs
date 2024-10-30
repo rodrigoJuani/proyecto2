@@ -59,5 +59,9 @@ namespace ChessLogic
                 sb.Append(empty);
             }
         }
+        private void AddPiecePlacement(Board board)
+        {
+
+        }
     }
 }
