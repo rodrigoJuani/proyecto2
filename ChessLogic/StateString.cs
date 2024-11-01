@@ -117,6 +117,7 @@ namespace ChessLogic
                 sb.Append('-');
                 return;
             }
+            Position pos = board.GetPawnSkipPosition();
         }
     }
 }
