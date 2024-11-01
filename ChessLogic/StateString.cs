@@ -110,5 +110,9 @@ namespace ChessLogic
                 sb.Append('q');
             }
         }
+        private void AddEnPassant(Board board,Player currentPlayer)
+        {
+
+        }
     }
 }
