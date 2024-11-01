@@ -117,7 +117,8 @@ namespace ChessLogic
                 sb.Append('-');
                 return;
             }
-            Position pos = board.GetPawnSkipPosition(currentPlayer.Opponent();
+            Position pos = board.GetPawnSkipPosition(currentPlayer.Opponent());
+            char file=(char)('a')
         }
     }
 }
