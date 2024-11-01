@@ -99,7 +99,7 @@ namespace ChessLogic
             }
             if ( castleWQS )
             {
-                
+                sb.Append('Q');
             }
         }
     }
