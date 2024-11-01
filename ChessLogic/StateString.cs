@@ -114,7 +114,7 @@ namespace ChessLogic
         {
             if (!board.CanCaptureEnPassant(currentPlayer))
             {
-
+                sb.Append('');
             }
         }
     }
