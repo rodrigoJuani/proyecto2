@@ -97,6 +97,10 @@ namespace ChessLogic
             {
                 sb.Append('K');
             }
+            if ( castleWQS )
+            {
+                
+            }
         }
     }
 }
