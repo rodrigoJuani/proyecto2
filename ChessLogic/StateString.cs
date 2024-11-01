@@ -105,6 +105,10 @@ namespace ChessLogic
             {
                 sb.Append('k');
             }
+            if (castleBQS)
+            {
+
+            }
         }
     }
 }
