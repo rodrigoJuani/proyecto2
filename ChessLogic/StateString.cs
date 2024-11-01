@@ -15,7 +15,7 @@ namespace ChessLogic
             sb.Append(' ');
             AddCurrentPlayer(currentPlayer);
             sb.Append(' ');
-            //add castling rights
+            AddCastlingRights(board);
             sb.Append(' ');
             //Add en passant data
         }
