@@ -91,6 +91,7 @@ namespace ChessLogic
             if(!(castleWKS || castleWQS || castleBKS|| castleBQS))
             {
                 sb.Append('-');
+                return;
             }
         }
     }
