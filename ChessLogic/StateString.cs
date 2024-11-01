@@ -103,7 +103,7 @@ namespace ChessLogic
             }
             if (castleBKS)
             {
-
+                sb.Append('k');
             }
         }
     }
