@@ -93,6 +93,10 @@ namespace ChessLogic
                 sb.Append('-');
                 return;
             }
+            if (castleWKS)
+            {
+
+            }
         }
     }
 }
