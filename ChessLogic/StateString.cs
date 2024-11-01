@@ -95,7 +95,7 @@ namespace ChessLogic
             }
             if (castleWKS)
             {
-
+                sb.Append('K');
             }
         }
     }
