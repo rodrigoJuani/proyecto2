@@ -85,6 +85,7 @@ namespace ChessLogic
         {
             bool castleWKS = board.CastleRightKS(Player.White);
             bool castleWQS = board.CastleRightQS(Player.White);
+            bool castleBKS = board.CastleRightKS(Player.Black);
         }
     }
 }
