@@ -118,7 +118,7 @@ namespace ChessLogic
                 return;
             }
             Position pos = board.GetPawnSkipPosition(currentPlayer.Opponent());
-            char file=(char)('a')
+            char file=(char)('a'+pos.Column)
         }
     }
 }
