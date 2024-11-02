@@ -121,7 +121,7 @@ namespace ChessLogic
             char file = (char)('a' + pos.Column);
             int rank = 8 -pos.Row;
             sb.Append(file);
-            sb.Append()
+            sb.Append(rank)
         }
     }
 }
