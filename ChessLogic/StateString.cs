@@ -19,6 +19,7 @@ namespace ChessLogic
             sb.Append(' ');
             sb.Append(board,currentPlayer);
         }
+        public
         private static char PieceChar(Piece piece)
         {
             char c = piece.Type switch
