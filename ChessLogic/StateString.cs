@@ -17,7 +17,7 @@ namespace ChessLogic
             sb.Append(' ');
             AddCastlingRights(board);
             sb.Append(' ');
-            sb.Append()
+            sb.Append(board,);
         }
         private static char PieceChar(Piece piece)
         {
