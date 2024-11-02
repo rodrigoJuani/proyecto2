@@ -19,7 +19,7 @@ namespace ChessLogic
             sb.Append(' ');
             sb.Append(board,currentPlayer);
         }
-        public override
+        public override string
         private static char PieceChar(Piece piece)
         {
             char c = piece.Type switch
