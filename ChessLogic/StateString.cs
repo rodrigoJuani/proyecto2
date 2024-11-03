@@ -13,7 +13,7 @@ namespace ChessLogic
             sb.Append(' ');
             AddCastlingRights(board);
             sb.Append(' ');
-            sb.Append(board,currentPlayer);
+            AddEnPassant(board,currentPlayer);
         }
         public override string ToString()
         {

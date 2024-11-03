@@ -196,7 +196,8 @@
                     return true;
                 }
 {            }
-                return false;
+            }
+            return false;
         }
         public bool CanCaptureEnPassant(Player player)
         {
