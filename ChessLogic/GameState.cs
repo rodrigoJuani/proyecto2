@@ -94,6 +94,7 @@ namespace ChessLogic
             {
                 stateHistory[stateString] = 1;
             }
+            else { }
         }
     }
 }
