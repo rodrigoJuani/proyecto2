@@ -12,6 +12,8 @@ namespace ChessLogic
         public Result Result { get; private set; } = null;
 
         private int noCaptureOrPawnMoves = 0;
+        private string stateString;
+        private readonly Dictionary<string, int> stateHistory = new Dictionary<string, int>();
         public GameState(Player player,Board board)
         {
             CurrentPlayer = player;
