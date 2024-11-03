@@ -79,7 +79,9 @@ namespace ChessLogic
             {
                 Result = Result.Draw(EndReason.FiftyMoveRule);
             }
-            else if (ThreefoldRepetition()) { }
+            else if (ThreefoldRepetition()) {
+                Result = Result.Draw(EndReason.ThreefoldRepetition);
+            }
         }
         public bool IsGameOver()
         {
