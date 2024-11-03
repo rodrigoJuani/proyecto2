@@ -90,7 +90,10 @@ namespace ChessLogic
         private void UpdateStateString()
         {
             stateString = new StateString(CurrentPlayer, Board).ToString();
-            if (!stateHistory.ContainsKey(stateString)) { }
+            if (!stateHistory.ContainsKey(stateString))
+            {
+                stateHistory[stateString] = 1;
+            }
         }
     }
 }
