@@ -46,6 +46,7 @@ namespace ChessLogic
                 noCaptureOrPawnMoves++;
             }
             CurrentPlayer = CurrentPlayer.Opponent();
+            UpdateStateString();
             CheckForGameOver();
         }
         public IEnumerable<Move> AllLegalMovesFor(Player player)
