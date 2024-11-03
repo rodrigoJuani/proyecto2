@@ -101,5 +101,6 @@ namespace ChessLogic
                 stateHistory[stateString]++;
             }
         }
+        private bool TheefoldRepetition() { }
     }
 }
