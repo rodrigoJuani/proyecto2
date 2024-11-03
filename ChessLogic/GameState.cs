@@ -40,6 +40,7 @@ namespace ChessLogic
             if (captureOrPaw)
             {
                 noCaptureOrPawnMoves = 0;
+                stateHistory.Clear();
             }
             else
             {
