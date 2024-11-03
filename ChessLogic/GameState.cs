@@ -87,5 +87,9 @@ namespace ChessLogic
             int fullMoves = noCaptureOrPawnMoves / 2;
             return fullMoves == 50;
         }
+        private void UpdateStateString()
+        {
+            stateString = new StateString(CurrentPlayer, Board).ToString();
+        }
     }
 }
