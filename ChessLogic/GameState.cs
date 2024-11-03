@@ -101,6 +101,9 @@ namespace ChessLogic
                 stateHistory[stateString]++;
             }
         }
-        private bool TheefoldRepetition() { }
+        private bool TheefoldRepetition()
+        {
+            return stateHistory[stateString] == 3;
+        }
     }
 }
