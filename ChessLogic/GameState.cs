@@ -79,6 +79,7 @@ namespace ChessLogic
             {
                 Result = Result.Draw(EndReason.FiftyMoveRule);
             }
+            else if (ThreefoldRepetition()) { }
         }
         public bool IsGameOver()
         {
@@ -101,7 +102,7 @@ namespace ChessLogic
                 stateHistory[stateString]++;
             }
         }
-        private bool TheefoldRepetition()
+        private bool ThreefoldRepetition()
         {
             return stateHistory[stateString] == 3;
         }
